@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "NearAndAroundMe"
 include(":app")
+
+# auto-edit 2025-12-05 12:47:03.915203
