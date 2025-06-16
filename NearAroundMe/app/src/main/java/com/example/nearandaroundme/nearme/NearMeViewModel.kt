@@ -104,3 +104,5 @@ class NearMeViewModel(
     private fun Place.toCoordinate(): Coordinate = Coordinate(latitude, longitude)
 }
 
+
+# auto-edit 2025-12-05 12:47:04.916574
