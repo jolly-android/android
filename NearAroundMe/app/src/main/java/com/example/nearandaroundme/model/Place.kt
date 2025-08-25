@@ -14,3 +14,5 @@ data class Place(
     val isOpenNow: Boolean = true
 )
 
+
+# auto-edit 2025-12-05 12:47:05.346323
