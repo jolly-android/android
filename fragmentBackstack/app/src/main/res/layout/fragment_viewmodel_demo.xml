@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    =====================================================================
+    VIEWMODEL SCOPES - Shared vs Fragment-scoped
+    =====================================================================
+    
+    VIEWMODEL SCOPING:
+    
+    1. FRAGMENT-SCOPED (viewModels())
+       - Created per fragment instance
+       - Survives configuration changes
+       - Destroyed when fragment is destroyed
+       - Use for: Fragment-specific data
+       
+       val viewModel: MyViewModel by viewModels()
+    
+    2. ACTIVITY-SCOPED (activityViewModels())
+       - Shared across all fragments in Activity
+       - Lives as long as Activity
+       - Use for: Shared data between fragments
+       
+       val sharedViewModel: SharedViewModel by activityViewModels()
+    
+    3. NAVIGATION GRAPH SCOPED (navGraphViewModels())
+       - Scoped to a navigation graph
+       - Shared across fragments in that graph
+       - Cleared when graph is popped from backstack
+       - Use for: Feature-module shared state
+       
+       val navViewModel: NavViewModel by navGraphViewModels(R.id.my_nav_graph)
+    
+    4. PARENT FRAGMENT SCOPED
+       - Shared with parent fragment and its children
+       - Use for: Communication between parent/child
+       
+       val parentViewModel: ParentViewModel by viewModels({ requireParentFragment() })
+    
+    BEST PRACTICES:
+    - Default to fragment-scoped
+    - Use activity-scoped sparingly
+    - Consider navGraph scope for feature modules
+    - Don't store View references in ViewModel!
+    
+    =====================================================================
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_primary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🧠 ViewModel Scopes"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compare Fragment-scoped vs Shared ViewModels"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="4dp" />
+
+    <!-- Fragment-scoped ViewModel -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/card_viewmodel"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fragment-Scoped ViewModel"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="by viewModels() - Unique to this fragment"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:alpha="0.8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Counter: "
+                    android:textSize="18sp"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtFragmentCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIncrementFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+1"
+                    style="@style/Widget.Material3.Button.TonalButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Shared ViewModel -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/card_architecture"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shared (Activity-Scoped) ViewModel"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="by activityViewModels() - Shared across fragments"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:alpha="0.8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Counter: "
+                    android:textSize="18sp"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtSharedCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIncrementShared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+1"
+                    style="@style/Widget.Material3.Button.TonalButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToSibling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Sibling Fragment"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Navigate to sibling, increment counters there, then come back. The shared counter persists, the fragment-scoped one resets!"
+        android:textSize="13sp"
+        android:textColor="@color/text_tertiary"
+        android:layout_marginTop="8dp" />
+
+    <!-- Code Example -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/code_background"
+        android:padding="12dp"
+        android:text="class MyFragment : Fragment() {\n    // Fragment-scoped: unique per fragment\n    private val viewModel: FragmentViewModel by viewModels()\n    \n    // Activity-scoped: shared across fragments\n    private val sharedViewModel: SharedViewModel \n        by activityViewModels()\n    \n    // NavGraph-scoped: shared within nav graph\n    private val navViewModel: NavViewModel \n        by navGraphViewModels(R.id.my_nav_graph)\n}"
+        android:textSize="11sp"
+        android:textColor="@color/code_text"
+        android:fontFamily="monospace"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
+

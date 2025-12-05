@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fragmentbackstack.fragments.HomeFragment"
+        android:label="Fragment Demo Home"
+        tools:layout="@layout/fragment_home">
+        
+        <action
+            android:id="@+id/action_home_to_lifecycle"
+            app:destination="@id/lifecycleFragment" />
+        
+        <action
+            android:id="@+id/action_home_to_transactions"
+            app:destination="@id/transactionsFragment" />
+        
+        <action
+            android:id="@+id/action_home_to_backstack"
+            app:destination="@id/backstackDemoFragment" />
+        
+        <action
+            android:id="@+id/action_home_to_dataPassing"
+            app:destination="@id/dataPassingFragment" />
+        
+        <action
+            android:id="@+id/action_home_to_viewmodel"
+            app:destination="@id/viewModelDemoFragment" />
+        
+        <action
+            android:id="@+id/action_home_to_viewpager"
+            app:destination="@id/viewPagerFragment" />
+        
+        <action
+            android:id="@+id/action_home_to_stateRestoration"
+            app:destination="@id/stateRestorationFragment" />
+        
+        <action
+            android:id="@+id/action_home_to_dialogDemo"
+            app:destination="@id/dialogDemoFragment" />
+        
+        <action
+            android:id="@+id/action_home_to_architectureDemo"
+            app:destination="@id/architectureDemoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lifecycleFragment"
+        android:name="com.example.fragmentbackstack.fragments.LifecycleFragment"
+        android:label="Fragment Lifecycle"
+        tools:layout="@layout/fragment_lifecycle">
+        
+        <action
+            android:id="@+id/action_lifecycle_to_child"
+            app:destination="@id/childLifecycleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/childLifecycleFragment"
+        android:name="com.example.fragmentbackstack.fragments.ChildLifecycleFragment"
+        android:label="Child Lifecycle"
+        tools:layout="@layout/fragment_child_lifecycle" />
+
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.example.fragmentbackstack.fragments.TransactionsFragment"
+        android:label="Fragment Transactions"
+        tools:layout="@layout/fragment_transactions" />
+
+    <fragment
+        android:id="@+id/backstackDemoFragment"
+        android:name="com.example.fragmentbackstack.fragments.BackstackDemoFragment"
+        android:label="Backstack Demo"
+        tools:layout="@layout/fragment_backstack_demo">
+        
+        <action
+            android:id="@+id/action_backstack_to_stackA"
+            app:destination="@id/stackFragmentA" />
+        
+        <action
+            android:id="@+id/action_backstack_to_self_singleTop"
+            app:destination="@id/backstackDemoFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/stackFragmentA"
+        android:name="com.example.fragmentbackstack.fragments.StackFragmentA"
+        android:label="Stack A"
+        tools:layout="@layout/fragment_stack">
+        
+        <action
+            android:id="@+id/action_stackA_to_stackB"
+            app:destination="@id/stackFragmentB" />
+        
+        <action
+            android:id="@+id/action_stackA_popToHome"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/stackFragmentB"
+        android:name="com.example.fragmentbackstack.fragments.StackFragmentB"
+        android:label="Stack B"
+        tools:layout="@layout/fragment_stack">
+        
+        <action
+            android:id="@+id/action_stackB_to_stackC"
+            app:destination="@id/stackFragmentC" />
+        
+        <action
+            android:id="@+id/action_stackB_to_stackC_popA"
+            app:destination="@id/stackFragmentC"
+            app:popUpTo="@id/stackFragmentA"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/stackFragmentC"
+        android:name="com.example.fragmentbackstack.fragments.StackFragmentC"
+        android:label="Stack C"
+        tools:layout="@layout/fragment_stack">
+        
+        <action
+            android:id="@+id/action_stackC_popToBackstackDemo"
+            app:destination="@id/backstackDemoFragment"
+            app:popUpTo="@id/backstackDemoFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dataPassingFragment"
+        android:name="com.example.fragmentbackstack.fragments.DataPassingFragment"
+        android:label="Passing Data"
+        tools:layout="@layout/fragment_data_passing">
+        
+        <action
+            android:id="@+id/action_dataPassing_to_receiver"
+            app:destination="@id/dataReceiverFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dataReceiverFragment"
+        android:name="com.example.fragmentbackstack.fragments.DataReceiverFragment"
+        android:label="Data Receiver"
+        tools:layout="@layout/fragment_data_receiver">
+        
+        <argument
+            android:name="userName"
+            app:argType="string"
+            android:defaultValue="Guest" />
+        
+        <argument
+            android:name="userId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        
+        <argument
+            android:name="isPremium"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewModelDemoFragment"
+        android:name="com.example.fragmentbackstack.fragments.ViewModelDemoFragment"
+        android:label="ViewModel Demo"
+        tools:layout="@layout/fragment_viewmodel_demo">
+        
+        <action
+            android:id="@+id/action_viewmodel_to_sibling"
+            app:destination="@id/viewModelSiblingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewModelSiblingFragment"
+        android:name="com.example.fragmentbackstack.fragments.ViewModelSiblingFragment"
+        android:label="ViewModel Sibling"
+        tools:layout="@layout/fragment_viewmodel_sibling" />
+
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.fragmentbackstack.fragments.ViewPagerFragment"
+        android:label="ViewPager2 Demo"
+        tools:layout="@layout/fragment_viewpager" />
+
+    <fragment
+        android:id="@+id/stateRestorationFragment"
+        android:name="com.example.fragmentbackstack.fragments.StateRestorationFragment"
+        android:label="State Restoration"
+        tools:layout="@layout/fragment_state_restoration" />
+
+    <fragment
+        android:id="@+id/dialogDemoFragment"
+        android:name="com.example.fragmentbackstack.fragments.DialogDemoFragment"
+        android:label="DialogFragment Demo"
+        tools:layout="@layout/fragment_dialog_demo" />
+
+    <fragment
+        android:id="@+id/architectureDemoFragment"
+        android:name="com.example.fragmentbackstack.fragments.ArchitectureDemoFragment"
+        android:label="MVVM Architecture"
+        tools:layout="@layout/fragment_architecture_demo" />
+
+    <fragment
+        android:id="@+id/deepLinkFragment"
+        android:name="com.example.fragmentbackstack.fragments.DeepLinkFragment"
+        android:label="Deep Link Target"
+        tools:layout="@layout/fragment_deep_link">
+        
+        <argument
+            android:name="productId"
+            app:argType="string"
+            android:defaultValue="" />
+        
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="fragmentdemo://product/{productId}" />
+        
+        <deepLink
+            android:id="@+id/webDeepLink"
+            app:uri="https://www.example.com/product/{productId}" />
+    </fragment>
+
+</navigation>

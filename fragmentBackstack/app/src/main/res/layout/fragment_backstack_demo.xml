@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📚 Backstack Demo"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Backstack Depth:"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/txtBackstackCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent_primary" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/card_surface"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Navigate Actions"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNavigateToA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="navigate() → Stack A"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Adds Stack A to backstack. Press back to return here."
+                    android:textSize="12sp"
+                    android:textColor="@color/text_tertiary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSingleTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="navigate() with launchSingleTop"
+                    android:layout_marginTop="16dp"
+                    style="@style/Widget.Material3.Button.TonalButton" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Won't add duplicate if already at this destination. Try clicking multiple times!"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_tertiary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_surface"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pop Actions"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPopBackStack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="popBackStack()"
+                    android:layout_marginTop="8dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pops the current destination. Same as pressing back."
+                    android:textSize="12sp"
+                    android:textColor="@color/text_tertiary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPopToHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="popBackStack(home, inclusive=false)"
+                    android:layout_marginTop="16dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pops all destinations up to Home, but keeps Home."
+                    android:textSize="12sp"
+                    android:textColor="@color/text_tertiary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Backstack Visualization:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/txtBackstackVisualization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/code_background"
+            android:padding="12dp"
+            android:text="[Home]"
+            android:textSize="12sp"
+            android:textColor="@color/code_text"
+            android:fontFamily="monospace"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>
