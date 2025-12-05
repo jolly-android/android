@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NearAndAroundMe</string>
+    <string name="search_hint">Search coffee, food, parks…</string>
+    <string name="home_title">Find something nearby</string>
+    <string name="map_section_title">Map</string>
+    <string name="list_section_title">Nearby spots</string>
+    <string name="no_results_title">Nothing matched your search</string>
+    <string name="no_results_body">Try another keyword or clear the filter.</string>
+    <string name="action_call">Call</string>
+    <string name="action_directions">Directions</string>
+    <string name="directions_unavailable">Could not open directions app.</string>
+    <string name="call_unavailable">Could not open dialer.</string>
+    <string name="place_detail_overview">Overview</string>
+    <string name="google_maps_key">GET_YOUR_MAPS_KEY</string>
+</resources>
