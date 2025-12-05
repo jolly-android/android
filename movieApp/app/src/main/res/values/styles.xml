@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/appColor</item>
+        <item name="colorPrimaryDark">#fff</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="progressBarStyle" parent="Theme.MaterialComponents.DayNight">
+<!--        <item name="android:indeterminateDrawable">@drawable/progress_bar</item>-->
+        <item name="colorAccent">@color/appColor</item>
+    </style>
+
+
+
+
+
+</resources>
