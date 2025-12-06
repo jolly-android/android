@@ -6,71 +6,65 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.core.view.isVisible
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.phoenix.pillreminder.R
 import com.phoenix.pillreminder.databinding.AdapterListMedicinesBinding
 import com.phoenix.pillreminder.feature_alarms.domain.model.Medicine
 import java.text.SimpleDateFormat
 import java.util.Calendar
-import java.util.Date
 import java.util.Locale
 
 private const val HOUR_24_FORMAT = "HH:mm"
 private const val HOUR_12_FORMAT = "hh:mm a"
 
-class RvMedicinesListAdapter (private val showDeleteAlarmDialog: (Medicine) -> Unit,
-                              private val showDeleteAllAlarmsDialog: (Medicine) -> Unit,
-                              private val markMedicineUsage: (Medicine) -> Unit,
-                              private val markMedicinesAsSkipped: (Medicine) -> Unit) : RecyclerView.Adapter<MyViewHolder>() {
+class RvMedicinesListAdapter(
+    private val showDeleteAlarmDialog: (Medicine) -> Unit,
+    private val showDeleteAllAlarmsDialog: (Medicine) -> Unit,
+    private val markMedicineUsage: (Medicine) -> Unit,
+    private val markMedicinesAsSkipped: (Medicine) -> Unit
+) : ListAdapter<Medicine, MedicineViewHolder>(DiffCallback) {
 
-    private val medicineList = ArrayList<Medicine>()
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedicineViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val medicinesBinding = AdapterListMedicinesBinding.inflate(layoutInflater, parent, false)
 
-        return MyViewHolder(medicinesBinding)
+        return MedicineViewHolder(medicinesBinding)
     }
 
-    override fun getItemCount(): Int {
-        return medicineList.size
+    override fun onBindViewHolder(holder: MedicineViewHolder, position: Int) {
+        holder.bind(
+            getItem(position),
+            showDeleteAlarmDialog,
+            showDeleteAllAlarmsDialog,
+            markMedicineUsage,
+            markMedicinesAsSkipped
+        )
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(medicineList[position], holder, showDeleteAlarmDialog, showDeleteAllAlarmsDialog, markMedicineUsage, markMedicinesAsSkipped)
-    }
-
-    fun setList(medicines: List<Medicine>, selectedDate: Date){
-        val calendar = Calendar.getInstance()
-        calendar.time = selectedDate
-
-        val filteredList = medicines.filter { medicine ->
-            val medicineCalendar = Calendar.getInstance().apply {
-                timeInMillis = medicine.alarmInMillis
-            }
-
-            medicineCalendar.get(Calendar.YEAR) == calendar.get(Calendar.YEAR) &&
-                    medicineCalendar.get(Calendar.MONTH) == calendar.get(Calendar.MONTH) &&
-                    medicineCalendar.get(Calendar.DAY_OF_MONTH) == calendar.get(Calendar.DAY_OF_MONTH)
+    private companion object DiffCallback : DiffUtil.ItemCallback<Medicine>() {
+        override fun areItemsTheSame(oldItem: Medicine, newItem: Medicine): Boolean {
+            return oldItem.id == newItem.id && oldItem.alarmInMillis == newItem.alarmInMillis
         }
 
-        medicineList.clear()
-        medicineList.addAll(filteredList)
-        sortList()
-        notifyDataSetChanged()
+        override fun areContentsTheSame(oldItem: Medicine, newItem: Medicine): Boolean {
+            return oldItem == newItem
+        }
     }
-
-    private fun sortList(){
-        medicineList.sortWith(compareBy({it.alarmHour}, {it.alarmMinute}))
-    }
-
 }
 
-class MyViewHolder(private val medicinesBinding: AdapterListMedicinesBinding):RecyclerView.ViewHolder(medicinesBinding.root){
+class MedicineViewHolder(private val medicinesBinding: AdapterListMedicinesBinding): RecyclerView.ViewHolder(medicinesBinding.root){
 
 
-    fun bind(medicine: Medicine, holder: MyViewHolder, showDeleteAlarmDialog: (Medicine) -> Unit, showDeleteAllAlarmsDialog: (Medicine) -> Unit, markMedicineUsage: (Medicine) -> Unit, markMedicinesAsSkipped: (Medicine) -> Unit){
-        val context = holder.itemView.context
+    fun bind(
+        medicine: Medicine,
+        showDeleteAlarmDialog: (Medicine) -> Unit,
+        showDeleteAllAlarmsDialog: (Medicine) -> Unit,
+        markMedicineUsage: (Medicine) -> Unit,
+        markMedicinesAsSkipped: (Medicine) -> Unit
+    ){
+        val context = itemView.context
         val currentTimeInMillis = System.currentTimeMillis()
 
         //Formats the textview to show the hour in format HH:MM

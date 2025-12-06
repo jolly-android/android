@@ -82,6 +82,10 @@
     <string name="medicine_already_taken">Medicine already taken</string>
     <string name="medicine_not_taken_yet">Medicine not taken yet.</string>
     <string name="medicine_skipped">Dose skipped.</string>
+    <string name="medicine_marked_as_taken">Dose marked as taken.</string>
+    <string name="medicine_marked_as_skipped">Dose marked as skipped.</string>
+    <string name="pillbox_reminder_enabled">Pillbox reminder scheduled.</string>
+    <string name="pillbox_reminder_disabled">Pillbox reminder disabled.</string>
     <string name="quantity">Quantity</string>
     <string name="set_the_quantity_per_dosage">Set the quantity per dosage:</string>
     <string name="this_app_heavily_depends_on_user_overlay_and_notification_permissions_to_properly_work">This app heavily depends on user overlay and notification permissions to properly work.</string>
