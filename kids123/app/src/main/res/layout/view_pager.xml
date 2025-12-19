@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/llTop" android:background="@color/fColor" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <RelativeLayout android:orientation="vertical" android:id="@+id/rlTopTexture" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="4">
+            <androidx.viewpager2.widget.ViewPager2 android:id="@+id/pager" android:paddingLeft="20dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:id="@+id/btnHome" android:layout_width="50dp" android:layout_height="50dp" android:layout_margin="10dp" android:src="@drawable/btn_home" android:scaleType="centerInside" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+            <ImageView android:id="@+id/btnLeft" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginTop="20dp" android:src="@drawable/btn_arrow" android:scaleType="centerInside" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_centerInParent="true"/>
+            <ImageView android:id="@+id/btnRight" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginTop="20dp" android:src="@drawable/btn_arrow" android:scaleType="centerInside" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerInParent="true" android:scaleX="-1"/>
+        </RelativeLayout>
+        <HorizontalScrollView android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp"/>
+        </HorizontalScrollView>
+    </LinearLayout>
+    <FrameLayout android:gravity="center" android:id="@+id/adViewTop" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

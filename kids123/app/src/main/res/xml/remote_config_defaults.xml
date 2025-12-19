@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <entry>
+        <key>moreapps_link
+        </key>
+        <value>market://details?id=com.gamesforkids.preschoolworksheets.alphabets
+        </value>
+    </entry>
+</defaultsMap>

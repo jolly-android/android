@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@+id/rltop" android:background="@drawable/bg_3" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:gravity="left" android:layout_gravity="left" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.7">
+                <ImageView android:id="@+id/btnHome" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:src="@drawable/btn_home" android:scaleType="centerInside" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+            </RelativeLayout>
+            <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/llMainTop" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.5">
+                <ImageView android:id="@+id/top1" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+                <ImageView android:id="@+id/top2" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+                <ImageView android:id="@+id/top3" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/llMainBottom" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_weight="1">
+                <RelativeLayout android:gravity="bottom" android:layout_gravity="bottom" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:id="@+id/inside_imageview1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:src="@drawable/bl1"/>
+                    <ImageView android:id="@+id/bottom1" android:padding="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/questionmark" android:scaleType="centerInside" android:layout_alignLeft="@+id/inside_imageview1" android:layout_alignTop="@+id/inside_imageview1" android:layout_alignRight="@+id/inside_imageview1" android:layout_alignBottom="@+id/inside_imageview1"/>
+                </RelativeLayout>
+                <RelativeLayout android:gravity="bottom" android:layout_gravity="bottom" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:id="@+id/inside_imageview2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:src="@drawable/bl2"/>
+                    <ImageView android:id="@+id/bottom2" android:padding="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/questionmark" android:scaleType="centerInside" android:layout_alignLeft="@+id/inside_imageview2" android:layout_alignTop="@+id/inside_imageview2" android:layout_alignRight="@+id/inside_imageview2" android:layout_alignBottom="@+id/inside_imageview2"/>
+                </RelativeLayout>
+                <RelativeLayout android:gravity="bottom" android:layout_gravity="bottom" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:id="@+id/inside_imageview3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:src="@drawable/bl3"/>
+                    <ImageView android:id="@+id/bottom3" android:padding="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/questionmark" android:scaleType="centerInside" android:layout_alignLeft="@+id/inside_imageview3" android:layout_alignTop="@+id/inside_imageview3" android:layout_alignRight="@+id/inside_imageview3" android:layout_alignBottom="@+id/inside_imageview3"/>
+                </RelativeLayout>
+                <RelativeLayout android:gravity="bottom" android:layout_gravity="bottom" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:id="@+id/inside_imageview4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:src="@drawable/bl4"/>
+                    <ImageView android:id="@+id/bottom4" android:padding="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/questionmark" android:scaleType="centerInside" android:layout_alignLeft="@+id/inside_imageview4" android:layout_alignTop="@+id/inside_imageview4" android:layout_alignRight="@+id/inside_imageview4" android:layout_alignBottom="@+id/inside_imageview4"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout android:gravity="center" android:id="@+id/adViewTop" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

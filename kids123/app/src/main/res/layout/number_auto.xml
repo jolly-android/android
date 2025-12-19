@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/llTop" android:background="@drawable/wood_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.2">
+        <RelativeLayout android:gravity="left" android:layout_gravity="left" android:orientation="horizontal" android:background="@drawable/topwood" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.12">
+            <ImageView android:id="@+id/btnHome" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_home" android:scaleType="centerInside" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+            <ImageView android:id="@+id/btnStart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_auto" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+            <ImageView android:id="@+id/btnPlaySong" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_song" android:layout_toLeftOf="@+id/btnStart"/>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_weight="1">
+            <ImageView android:gravity="center" android:id="@+id/buttona" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonb" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonc" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttond" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonf" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttong" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_weight="1">
+            <ImageView android:gravity="center" android:id="@+id/buttonh" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttoni" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonj" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonk" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonl" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonm" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonn" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="50dp" android:layout_weight="1">
+            <ImageView android:gravity="center" android:id="@+id/buttono" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonq" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonr" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttons" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttont" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/buttonblank1" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="50dp" android:layout_marginRight="50dp">
+            <ImageView android:gravity="bottom" android:layout_gravity="left" android:id="@+id/buttonblank" android:visibility="invisible" android:layout_width="1dp" android:layout_height="1dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:gravity="center" android:id="@+id/adViewTop" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

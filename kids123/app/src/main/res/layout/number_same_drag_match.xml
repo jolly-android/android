@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:orientation="horizontal" android:background="@drawable/room_toy" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <View android:layout_gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/emiter_center_left" android:layout_width="2dp" android:layout_height="2dp" android:layout_marginLeft="50dp" android:layout_marginTop="20dp"/>
+        <View android:layout_gravity="top|right|center_vertical|center_horizontal|center" android:id="@+id/emiter_center_right" android:layout_width="2dp" android:layout_height="2dp" android:layout_marginTop="20dp" android:layout_marginRight="80dp"/>
+        <View android:layout_gravity="top|right|center_vertical|center_horizontal|center" android:id="@+id/emiter_top_right" android:layout_width="2dp" android:layout_height="2dp" android:layout_marginTop="20dp" android:layout_marginRight="190dp"/>
+        <View android:layout_gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/emiter_top_left" android:layout_width="2dp" android:layout_height="2dp" android:layout_marginLeft="190dp" android:layout_marginTop="20dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2.4">
+                    <ImageView android:id="@+id/btnHome" android:layout_width="50dp" android:layout_height="50dp" android:layout_margin="10dp" android:src="@drawable/btn_home" android:scaleType="centerInside" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:layout_gravity="top" android:orientation="horizontal" android:id="@+id/imageParent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="100dp" android:layout_marginRight="100dp" android:layout_weight="2">
+                    <ImageView android:gravity="top" android:layout_gravity="top" android:id="@+id/image1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    <ImageView android:gravity="top" android:layout_gravity="top" android:id="@+id/image2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    <ImageView android:gravity="top" android:layout_gravity="top" android:id="@+id/image3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:layout_gravity="top" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="50dp" android:layout_marginRight="50dp" android:layout_weight="1.5">
+                    <RelativeLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <ImageView android:id="@+id/inside_image4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/box_red" android:scaleType="centerInside"/>
+                        <ImageView android:id="@+id/image4" android:padding="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:scaleType="centerInside" android:layout_alignLeft="@+id/inside_image4" android:layout_alignTop="@+id/inside_image4" android:layout_alignRight="@+id/inside_image4" android:layout_alignBottom="@+id/inside_image4"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <ImageView android:id="@+id/inside_image5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/box_blue"/>
+                        <ImageView android:id="@+id/image5" android:padding="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:scaleType="centerInside" android:layout_alignLeft="@+id/inside_image5" android:layout_alignTop="@+id/inside_image5" android:layout_alignRight="@+id/inside_image5" android:layout_alignBottom="@+id/inside_image5"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <ImageView android:id="@+id/inside_image6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/box_green"/>
+                        <ImageView android:id="@+id/image6" android:padding="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:scaleType="centerInside" android:layout_alignLeft="@+id/inside_image6" android:layout_alignTop="@+id/inside_image6" android:layout_alignRight="@+id/inside_image6" android:layout_alignBottom="@+id/inside_image6"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:gravity="center" android:id="@+id/adViewTop" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

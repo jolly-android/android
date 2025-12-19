@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/top_l1" android:background="#9F89E3" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="7">
+                <LinearLayout android:orientation="vertical" android:id="@+id/leftTop" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:padding="2dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <ImageView android:id="@+id/pen" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/menu1pencil_sel"/> /&gt; 
+                    </LinearLayout>
+                    <LinearLayout android:padding="2dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <ImageView android:id="@+id/sound" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/but_10"/> /&gt; 
+                    </LinearLayout>
+                    <LinearLayout android:padding="2dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <ImageView android:id="@+id/eraser" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/menu4eraser"/> /&gt; 
+                    </LinearLayout>
+                    <LinearLayout android:padding="2dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <ImageView android:id="@+id/save" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/menu5save"/> /&gt; 
+                    </LinearLayout>
+                    <LinearLayout android:padding="2dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <ImageView android:id="@+id/mPaint" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/btn_back1"/> /&gt; 
+                    </LinearLayout>
+                    <LinearLayout android:padding="2dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <ImageView android:id="@+id/back" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/btn_home1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.5">
+                <RelativeLayout android:id="@+id/drawing" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.5">
+                    <FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+
+                        <com.counting.kidsgame.drawing.DrawingPicture
+                            android:id="@+id/draw"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white" />
+
+                        <ImageView android:id="@+id/iv" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/spark"/>
+                    </FrameLayout>
+                    <androidx.drawerlayout.widget.DrawerLayout android:id="@+id/dr_layout1" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <LinearLayout android:layout_gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:id="@+id/drawer1" android:background="@drawable/tab" android:padding="10dp" android:layout_width="70dp" android:layout_height="180dp" android:rotation="180">
+                            <ImageView android:id="@+id/iv11" android:layout_width="match_parent" android:layout_height="50dp" android:layout_margin="10dp" android:src="@drawable/bbig_dot" android:layout_weight="1"/>
+                            <ImageView android:id="@+id/iv21" android:layout_width="match_parent" android:layout_height="50dp" android:layout_margin="10dp" android:src="@drawable/mmedium_dot" android:layout_weight="1"/>
+                            <ImageView android:id="@+id/iv31" android:layout_width="match_parent" android:layout_height="50dp" android:layout_margin="10dp" android:src="@drawable/ssmall_dot" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </androidx.drawerlayout.widget.DrawerLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
+                        <Button android:layout_gravity="left" android:id="@+id/previous" android:background="@drawable/arrow1" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.15" android:rotation="180"/>
+                        <Button android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+                        <Button android:background="@drawable/arrow1" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+                        <Button android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+                        <Button android:layout_gravity="right" android:id="@+id/next" android:background="@drawable/arrow2" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.15" android:rotation="180"/>
+                    </LinearLayout>
+                    <androidx.drawerlayout.widget.DrawerLayout android:id="@+id/dr_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/drawer" android:background="@drawable/tab" android:padding="10dp" android:layout_width="70dp" android:layout_height="180dp">
+                            <ImageView android:id="@+id/iv1" android:layout_width="match_parent" android:layout_height="50dp" android:layout_margin="10dp" android:src="@drawable/green_5" android:layout_weight="1"/>
+                            <ImageView android:id="@+id/iv2" android:layout_width="match_parent" android:layout_height="50dp" android:layout_margin="10dp" android:src="@drawable/git_9" android:layout_weight="1"/>
+                            <ImageView android:id="@+id/iv3" android:layout_width="match_parent" android:layout_height="50dp" android:layout_margin="10dp" android:src="@drawable/pat_2" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </androidx.drawerlayout.widget.DrawerLayout>
+                </RelativeLayout>
+            </FrameLayout>
+            <FrameLayout android:orientation="vertical" android:id="@+id/horizontal_recycler_view_frameview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="7">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="2dp" android:layout_weight="6.1">
+                        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                            <ImageView android:id="@+id/bt1" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/but_menu"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:orientation="vertical" android:id="@+id/horizontal_recycler_view" android:paddingLeft="2dp" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@null" android:layout_weight="1" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:gravity="center" android:id="@+id/adViewTop" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
