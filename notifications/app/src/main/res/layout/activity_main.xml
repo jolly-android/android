@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_500"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_subtitle"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/black" />
+
+        <!-- Basic Notifications Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/section_basic"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBasicNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_basic"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_dialog_info"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBigTextNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_big_text"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_dialog_email"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBigPictureNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_big_picture"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_menu_gallery"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnInboxNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_inbox"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_dialog_email"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <!-- Advanced Notifications Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/section_advanced"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActionNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_action"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_menu_info_details"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProgressNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_progress"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/stat_sys_download"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHeadsUpNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_heads_up"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_dialog_alert"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGroupedNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_grouped"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_menu_sort_by_size"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <!-- Special Notifications Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/section_special"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCustomNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_custom"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_menu_info_details"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMediaNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_media"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_media_play"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnScheduledNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_scheduled"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_menu_recent_history"
+            style="@style/Widget.Material3.Button.ElevatedButton" />
+
+        <!-- FCM Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/section_fcm"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tvFcmToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fcm_token_loading"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:fontFamily="monospace" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopyToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_copy_token"
+            android:layout_marginBottom="8dp"
+            app:icon="@android:drawable/ic_menu_share"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <!-- Control Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/section_control"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cancel_all"
+            android:layout_marginBottom="16dp"
+            app:icon="@android:drawable/ic_menu_close_clear_cancel"
+            style="@style/Widget.Material3.Button.TonalButton" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

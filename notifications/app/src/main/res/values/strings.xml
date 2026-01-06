@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Notifications</string>
+    <string name="app_title">Android Notifications Demo</string>
+    <string name="app_subtitle">Explore all types of notifications</string>
+    
+    <!-- Sections -->
+    <string name="section_basic">Basic Notifications</string>
+    <string name="section_advanced">Advanced Notifications</string>
+    <string name="section_special">Special Notifications</string>
+    <string name="section_fcm">Push Notifications (FCM)</string>
+    <string name="section_control">Controls</string>
+    
+    <!-- Buttons -->
+    <string name="btn_basic">Basic Notification</string>
+    <string name="btn_big_text">Big Text Notification</string>
+    <string name="btn_big_picture">Big Picture Notification</string>
+    <string name="btn_inbox">Inbox Style Notification</string>
+    <string name="btn_action">Action Buttons Notification</string>
+    <string name="btn_progress">Progress Notification</string>
+    <string name="btn_heads_up">Heads-Up Notification</string>
+    <string name="btn_grouped">Grouped Notifications</string>
+    <string name="btn_custom">Custom Styled Notification</string>
+    <string name="btn_media">Media Style Notification</string>
+    <string name="btn_scheduled">Scheduled Notification (10s)</string>
+    <string name="btn_copy_token">Copy FCM Token</string>
+    <string name="btn_cancel_all">Cancel All Notifications</string>
+    
+    <!-- Messages -->
+    <string name="fcm_token_loading">Loading FCM Token…</string>
+    <string name="fcm_token_prefix">FCM Token:\n</string>
+    <string name="fcm_token_copied">FCM Token copied to clipboard</string>
+    <string name="scheduled_notification_set">Notification scheduled for 10 seconds</string>
+    <string name="all_notifications_cancelled">All notifications cancelled</string>
+    <string name="permission_required">Notification permission required</string>
+</resources>
