@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WorkManager Demo</string>
+    
+    <!-- Welcome Section -->
+    <string name="welcome_title">Welcome to WorkManager Demo!</string>
+    <string name="welcome_message">This app demonstrates various WorkManager features including one-time work, periodic work, work constraints, chaining, and progress tracking.</string>
+    
+    <!-- Button Labels -->
+    <string name="btn_simple_work">Simple Work</string>
+    <string name="btn_progress_work">Progress Work</string>
+    <string name="btn_constrained_work">Constrained Work</string>
+    <string name="btn_chained_work">Chained Work (A → B → C)</string>
+    <string name="btn_periodic_work">Periodic Work (15 min)</string>
+    <string name="btn_notification_work">Notification Work</string>
+    <string name="btn_cancel_all">Cancel All Work</string>
+    
+    <!-- Section Titles -->
+    <string name="work_types">Work Types</string>
+    <string name="work_progress">Work Progress</string>
+    <string name="work_status">Active Work Status</string>
+    
+    <!-- Status Messages -->
+    <string name="no_progress">No progress to show</string>
+</resources>
+
+
